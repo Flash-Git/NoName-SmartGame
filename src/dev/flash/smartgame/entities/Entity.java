@@ -1,5 +1,7 @@
 package dev.flash.smartgame.entities;
 
+import java.awt.Point;
+
 /**
  * Created by Flash on 17/10/2016.
  */
@@ -9,12 +11,17 @@ public class Entity {
     protected int y;
     protected int w;
     protected int h;
+    protected Point center;
 
     public Entity(){
 
     }
 
     //GETTERS AND SETTERS
+    public Point getCenter(){
+        center.setLocation(x + w/2, y + h/2);
+        return center;
+    }
 
     public int getX() {
         return x;
