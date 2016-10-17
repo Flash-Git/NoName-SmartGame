@@ -26,6 +26,7 @@ public class Display {
 
     private void createDisplay() {
         frame = new JFrame(title);
+        frame.setName("Jonathon");
         frame.setSize(width, height);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);//TODO eventually incorporate adaptable sizes

@@ -51,9 +51,8 @@ public class Game implements Runnable{
         gameCamera = new GameCamera(handler, 0, 0);
 
         //Setting up the program's States
-        menuState = new MenuState(handler);
-        ingameState = new GameState(handler);
-        spriteViewerState = new SpriteViewerState(handler);
+        //menuState = new MenuState(handler);
+        //ingameState = new GameState(handler);
         //State.setState(menuState);
     }
 
@@ -74,9 +73,9 @@ public class Game implements Runnable{
         g.clearRect(0, 0, width, height);
 
         //Draw Here
-        if(State.getState() != null){
-            State.getState().render(g);
-        }
+        //if(State.getState() != null){
+        //    State.getState().render(g);
+        //}
 
         //End Draw
         bs.show();
@@ -147,4 +146,29 @@ public class Game implements Runnable{
             e.printStackTrace();
         }
     }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {//Does not change display
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {//Does not change display
+        this.height = height;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
 }

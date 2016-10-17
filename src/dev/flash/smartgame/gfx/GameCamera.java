@@ -1,6 +1,7 @@
 package dev.flash.smartgame.gfx;
 
 import dev.flash.smartgame.Handler;
+import dev.flash.smartgame.entities.Entity;
 
 /**
  * Created by Flash on 17/10/2016.
@@ -18,25 +19,21 @@ public class GameCamera {
 
     public void checkBlankSpace(){
 
-        int worldWidth = handler.getWorld().getWidth();
-        int worldHeight = handler.getWorld().getHeight();
-
         if(xOffset < 0){
             xOffset = 0;
-        }else if(xOffset > worldWidth * Tile.TILEWIDTH - handler.getWidth()){
-            xOffset = worldWidth * Tile.TILEWIDTH - handler.getWidth();
+        }else if(xOffset > handler.getWorldWidth()  - handler.getScreenWidth()){
+            xOffset = handler.getWorldWidth() - handler.getScreenWidth();
         }
         if(yOffset < 0){
             yOffset = 0;
-        }else if(yOffset > worldHeight * Tile.TILEWIDTH - handler.getHeight()){
-            yOffset = worldHeight * Tile.TILEHEIGHT - handler.getHeight();
+        }else if(yOffset > handler.getWorldHeight() - handler.getScreenHeight()){
+            yOffset = handler.getWorldHeight() - handler.getScreenHeight();
         }
     }
 
-
     public void centerOnEntity(Entity e){
-        xOffset = e.getX() - handler.getWidth() / 2 + e.getWidth()/2;
-        yOffset = e.getY() - handler.getHeight() / 2 + e.getHeight()/2;
+        xOffset = e.getX() - handler.getScreenWidth() / 2 + e.getW()/2;
+        yOffset = e.getY() - handler.getScreenHeight() / 2 + e.getH()/2;
         checkBlankSpace();
     }
 
