@@ -32,14 +32,14 @@ public class GameCamera {
     }
 
     public void centerOnEntity(Entity e){
-        xOffset = e.getX() - handler.getScreenWidth() / 2 + e.getW()/2;
+        xOffset = e.getX() - handler.getScreenWidth() / 2 + e.getW()/2;// TODO double check this
         yOffset = e.getY() - handler.getScreenHeight() / 2 + e.getH()/2;
         checkBlankSpace();
     }
 
-    public void move(float xAmt, float yAmt){
-        xOffset +=xAmt;
-        yOffset +=yAmt;
+    public void move(float x, float y){
+        xOffset +=x;
+        yOffset +=y;
         checkBlankSpace();
     }
 

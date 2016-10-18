@@ -25,7 +25,8 @@ public class Game implements Runnable{
     private Handler handler;
     private GameCamera gameCamera;
 
-    public static int FPS;
+    private long gameTime;
+    private int fps;
 
 
     public Game(String title, int width, int height){
@@ -96,6 +97,8 @@ public class Game implements Runnable{
         long deltaLastTime = System.nanoTime();;
         long deltaNow;
 
+        timer = 0;
+
         while(running){
             now = System.nanoTime();
             timer += now-lastTime;
@@ -107,6 +110,8 @@ public class Game implements Runnable{
                 deltaNow = System.nanoTime();
                 deltaTime = deltaNow-deltaLastTime;
 
+                gameTime+=(deltaTime/1000);
+
                 tick(deltaTime/1000000);//converts nano to milli
                 render();
                 ticks++;
@@ -115,8 +120,8 @@ public class Game implements Runnable{
             }
 
             if(timer>=1000000000){
-                System.out.println("Ticks and Frames: " + ticks);
-                FPS = ticks;
+                System.out.println(gameTime/1000000 + "s, " + ticks + " fps.");
+                fps = ticks;
                 ticks = 0;
                 timer = 0;
             }

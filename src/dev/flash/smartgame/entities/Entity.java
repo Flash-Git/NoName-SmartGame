@@ -7,10 +7,10 @@ import java.awt.Point;
  */
 public class Entity {
 
-    protected int x;
-    protected int y;
-    protected int w;
-    protected int h;
+    protected float x;
+    protected float y;
+    protected float w;
+    protected float h;
     protected Point center;
 
     public Entity(){
@@ -23,23 +23,23 @@ public class Entity {
         return center;
     }
 
-    public int getX() {
+    public float getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(float x) {
         this.x = x;
     }
 
-    public int getY() {
+    public float getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(float y) {
         this.y = y;
     }
 
-    public int getW() {
+    public float getW() {
         return w;
     }
 
@@ -47,11 +47,11 @@ public class Entity {
         this.w = w;
     }
 
-    public int getH() {
+    public float getH() {
         return h;
     }
 
-    public void setH(int h) {
+    public void setH(float h) {
         this.h = h;
     }
 }
