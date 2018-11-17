@@ -10,46 +10,46 @@ import java.awt.Dimension;
  */
 
 public class Display {
-    private JFrame frame;
-    private Canvas canvas;
+	private JFrame frame;
+	private Canvas canvas;
 
-    private String title;
-    private int width, height;
+	private String title;
+	private int width, height;
 
-    public Display(String title, int width, int height){
-        this.title = title;
-        this.width = width;
-        this.height = height;
+	public Display(String title, int width, int height) {
+		this.title = title;
+		this.width = width;
+		this.height = height;
 
-        createDisplay();
-    }
+		createDisplay();
+	}
 
-    private void createDisplay() {
-        frame = new JFrame(title);
-        frame.setName("Jonathon");
-        frame.setSize(width, height);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(false);//TODO eventually incorporate adaptable sizes
+	private void createDisplay() {
+		frame = new JFrame(title);
+		frame.setName("Jonathon");
+		frame.setSize(width, height);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(false);//TODO eventually incorporate adaptable sizes
 
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
 
-        canvas = new Canvas();
-        canvas.setPreferredSize(new Dimension(width, height));
-        canvas.setMaximumSize(new Dimension(width, height));
-        canvas.setMinimumSize(new Dimension(0, 0));
-        canvas.setFocusable(false);
+		canvas = new Canvas();
+		canvas.setPreferredSize(new Dimension(width, height));
+		canvas.setMaximumSize(new Dimension(width, height));
+		canvas.setMinimumSize(new Dimension(0, 0));
+		canvas.setFocusable(false);
 
-        frame.add(canvas);
-        frame.pack();
-    }
+		frame.add(canvas);
+		frame.pack();
+	}
 
-    public Canvas getCanvas(){
-        return canvas;
+	public Canvas getCanvas() {
+		return canvas;
 
-    }
+	}
 
-    public JFrame getFrame(){
-        return frame;
-    }
+	public JFrame getFrame() {
+		return frame;
+	}
 }

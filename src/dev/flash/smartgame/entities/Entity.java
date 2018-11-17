@@ -7,51 +7,51 @@ import java.awt.Point;
  */
 public class Entity {
 
-    protected float x;
-    protected float y;
-    protected float w;
-    protected float h;
-    protected Point center;
+	protected float x;
+	protected float y;
+	protected float w;
+	protected float h;
+	protected Point center;
 
-    public Entity(){
+	public Entity() {
 
-    }
+	}
 
-    //GETTERS AND SETTERS
-    public Point getCenter(){
-        center.setLocation(x + w/2, y + h/2);
-        return center;
-    }
+	//GETTERS AND SETTERS
+	public Point getCenter() {
+		center.setLocation(x + w / 2, y + h / 2);
+		return center;
+	}
 
-    public float getX() {
-        return x;
-    }
+	public float getX() {
+		return x;
+	}
 
-    public void setX(float x) {
-        this.x = x;
-    }
+	public void setX(float x) {
+		this.x = x;
+	}
 
-    public float getY() {
-        return y;
-    }
+	public float getY() {
+		return y;
+	}
 
-    public void setY(float y) {
-        this.y = y;
-    }
+	public void setY(float y) {
+		this.y = y;
+	}
 
-    public float getW() {
-        return w;
-    }
+	public float getW() {
+		return w;
+	}
 
-    public void setW(int w) {
-        this.w = w;
-    }
+	public void setW(int w) {
+		this.w = w;
+	}
 
-    public float getH() {
-        return h;
-    }
+	public float getH() {
+		return h;
+	}
 
-    public void setH(float h) {
-        this.h = h;
-    }
+	public void setH(float h) {
+		this.h = h;
+	}
 }

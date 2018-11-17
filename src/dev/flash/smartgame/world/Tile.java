@@ -5,12 +5,13 @@ package dev.flash.smartgame.world;
  */
 public class Tile {
 
-    private int x;
-    private int y;
+	private int x;
+	private int y;
 
-    public Tile(int x, int y, int type = 0, int[] ARRAY){
-        this.x=x;
-        this.y=y;
+	public Tile(int x, int y, int type, int[] ARRAY) {
 
-    }
+		this.x = x;
+		this.y = y;
+
+	}
 }

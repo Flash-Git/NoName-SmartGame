@@ -6,28 +6,28 @@ package dev.flash.smartgame.world;
 public class World {
 
 
-    private int width;
-    private int height;
+	private int width;
+	private int height;
 
-    public World(){
+	public World() {
 
-    }
+	}
 
-    //GETTERS AND SETTERS
-    public int getWidth() {
-        return width;
-    }
+	//GETTERS AND SETTERS
+	public int getWidth() {
+		return width;
+	}
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
+	public void setWidth(int width) {
+		this.width = width;
+	}
 
-    public int getHeight() {
-        return height;
-    }
+	public int getHeight() {
+		return height;
+	}
 
-    public void setHeight(int height) {
-        this.height = height;
-    }
+	public void setHeight(int height) {
+		this.height = height;
+	}
 
 }
